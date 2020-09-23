@@ -98,7 +98,6 @@ public class JavaStepDefs {
             if (item.equalsIgnoreCase("milk")) {
                 System.out.println("item is " + "milk");
             }
-
             System.out.println(item);
         }
 
