@@ -243,7 +243,6 @@ private static String reverseSent(String str){
     }
 
     private static int[] filterDups(int[] lst) {
-
         Set set = new HashSet<>(Arrays.asList(lst)); //filters out dups as soon as we pass in
 
         int[] result = new int[set.size()];
