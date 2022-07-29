@@ -1,3 +1,5 @@
+package javaInterview;
+
 import java.util.*;
 
 public class EllieClass {

@@ -17,7 +17,7 @@ package definitions;
         import static org.assertj.core.api.Assertions.assertThat;
         import static support.TestContext.*;
 
-public class SlavaCareersStepDefs {
+public class SlavaCareersPOMStepDefs {
     /*@Given("^I open \"([^\"]*)\" page$")
     public void iOpenPage(String page) throws Throwable {
         switch (page) {

@@ -39,7 +39,7 @@ public class RestWrapper {
         assertThat(response.getStatus()).isEqualTo(200); //verify
         JSONObject body = response.getBody().getObject(); //do something w it
         loginToken = body.getString("token");
-        System.out.println("\nLogin Successful! Token from DB: " + loginToken);
+        System.out.println("Login Successful! Token from DB: " + loginToken);
 
         TestContext.setTestData("token", loginToken);
     }

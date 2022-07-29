@@ -28,7 +28,7 @@ public class ConverterPOMStepDefs {
 
     @Then("^I enter into From field \"([^\"]*)\" and verify \"([^\"]*)\" result on page$")
     public void iEnterIntoFromFieldAndVerifyResultOnPage(String from, String to) throws Throwable {
-        String actualTo = new Converter().getActualTo(from, to);
+        String actualTo = new Converter().getActualTo(from);
         assertThat(actualTo).contains(to);
     }
 }

@@ -1,3 +1,5 @@
+package javaInterview;
+
 public class WF311 {
 
     public static void main(String[] args){

@@ -30,7 +30,6 @@ public class SlavaRestWrapper {
     public static final String POSITIONS = "positions";
     public static final String POSITION = "position";
 
-
     public SlavaRestWrapper login(HashMap<String, String> credentials) throws UnirestException {
         JSONObject payload = new JSONObject(credentials);
         RequestBodyEntity request = Unirest.post(baseUrl + "login")

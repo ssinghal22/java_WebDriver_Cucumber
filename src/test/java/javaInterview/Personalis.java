@@ -1,3 +1,5 @@
+package javaInterview;
+
 import java.util.Arrays;
 
 public class Personalis {

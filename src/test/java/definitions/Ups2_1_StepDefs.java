@@ -56,9 +56,6 @@ public class Ups2_1_StepDefs {
     @Then("^I verify that total charges changed$")
     public void iVerifyThatTotalChargesChanged() {
         By totalChargesSelector = By.xpath("//span[@id='total-charges-spinner']");
-
-        //WebElement totalChargesElement = getDriver().findElement(By.xpath("//span[@id='total-charges-spinner']"));
-
         WebElement totalChargesElement = getDriver().findElement(totalChargesSelector);
 
         String oldCharges = totalChargesElement.getText();

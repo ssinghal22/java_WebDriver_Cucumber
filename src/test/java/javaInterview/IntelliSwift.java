@@ -1,3 +1,5 @@
+package javaInterview;
+
 import java.util.HashMap;
 
 public class IntelliSwift {

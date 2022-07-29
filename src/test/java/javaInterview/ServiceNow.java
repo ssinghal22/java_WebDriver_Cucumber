@@ -1,3 +1,5 @@
+package javaInterview;
+
 import java.util.HashMap;
 import java.util.Map;
 /*Given an array of size n, find the majority element.

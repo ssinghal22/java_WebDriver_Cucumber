@@ -15,7 +15,7 @@ import java.util.HashMap;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.*;
 
-public class CareersStepDefs {
+public class CareersPOMStepDefs {
     @Given("^I open \"([^\"]*)\" page object$")
     public void iOpenPageObject(String page) throws Throwable {
         switch(page) {

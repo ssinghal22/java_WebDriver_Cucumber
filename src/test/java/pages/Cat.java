@@ -11,4 +11,13 @@ public class Cat extends Animal {
     public void meow() {
         System.out.println(getClass() + " " + getName() + " says: Meow!");
     }
+
+    //main() added by Soniya
+public static void main(String[] args){
+        Cat cat = new Cat();
+        cat.meow();
+
+        Cat cat1 = new Cat("Billy");
+        cat1.meow();
+}
 }

@@ -36,17 +36,8 @@ public class Converter extends Page {
     @FindBy(xpath = "//*[@name='toVal']")
     private WebElement toVal;
 
-    /*public void verifyFromTo(String from, String to) {
-        //fromVal.sendKeys(from);
-        sendKeys(fromVal, from);
-        String actualTo = toVal.getAttribute("value");
-        assertThat(actualTo).contains(to);
-    }*/
-
-    public String getActualTo(String from, String to) {
-        //fromVal.sendKeys(from);
+    public String getActualTo(String from) {
         sendKeys(fromVal, from);
         return toVal.getAttribute("value");
-        //assertThat(actualTo).contains(to);
     }
 }

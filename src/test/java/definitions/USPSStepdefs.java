@@ -24,6 +24,10 @@ public class USPSStepdefs {
             getDriver().get("https://www.ups.com/us/en/Home.page");
             getDriver().manage().window().setSize(new Dimension(1400, 768));
         }
+        else if (page.equalsIgnoreCase("careers")) {
+            getDriver().get("https://skryabin-careers.herokuapp.com/");
+            getDriver().manage().window().setSize(new Dimension(1400, 768));
+        }
     }
 
     @And("^I go to Lookup ZIP page by address$")

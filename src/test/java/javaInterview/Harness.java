@@ -1,4 +1,4 @@
-//birth year and death year of a person, calculate highly populated year
+package javaInterview;//birth year and death year of a person, calculate highly populated year
 //person1 1956 - 2000
 //person1 1930 - 2007
 //person1 1930 - 1999

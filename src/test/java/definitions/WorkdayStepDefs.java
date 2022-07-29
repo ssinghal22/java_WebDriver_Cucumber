@@ -1,6 +1,7 @@
 package definitions;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
@@ -27,10 +28,10 @@ public class WorkdayStepDefs {
         results.get(num).click();
     }
 
-    @Then("^I apply with LinkedIn$")
-    public void iApplyWithLinkedIn() throws Throwable {
-        getDriver().findElement(By.xpath("(//div[contains(@id,'Import_from_LinkedIn')])[1]")).click();
-    }
+   // @Then("^I apply with LinkedIn$")
+    //public void iApplyWithLinkedIn() throws Throwable {
+      //  getDriver().findElement(By.xpath("(//div[contains(@id,'Import_from_LinkedIn')])[1]")).click();
+    //}
 
     @Then("^I verify that valid OAuth LinkedIn login page opens$")
     public void iVerifyThatValidOAuthLinkedInLoginPageOpens() throws Throwable {
@@ -39,5 +40,11 @@ public class WorkdayStepDefs {
 
         String title = getDriver().getTitle();
         assertThat(title).containsIgnoringCase("Sign In to LinkedIn");
+    }
+
+    @And("^I Apply with LinkedIn$")
+    public void iApplyWithLinkedIn() throws InterruptedException {
+        getDriver().findElement(By.xpath("(//div[contains(@id,'Import_from_LinkedIn')])[1]")).click();
+        Thread.sleep(5000);
     }
 }
