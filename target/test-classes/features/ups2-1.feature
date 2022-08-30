@@ -26,3 +26,5 @@ Feature: UPS test cases
     Then I review all recorded details on the review page
     And I cancel the shipment form
     Then I verify shipment form is reset
+
+    # steps r same as in ups2.feature

@@ -9,7 +9,7 @@ Feature: Careers scenarios
     When I create new position
     And I verify position created
 
-  @careers2
+  @careers2 @create_position @regression
   Scenario: candidate applies to a position
     Given I open "careers" page object
     And I apply to a new position

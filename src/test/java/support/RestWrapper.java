@@ -147,6 +147,7 @@ public class RestWrapper {
 
             if (String.valueOf(apositionId).equals(positionId)) {
                 System.out.println("\nPosition exists in my jobs.");
+                break;
             }
         }
     }

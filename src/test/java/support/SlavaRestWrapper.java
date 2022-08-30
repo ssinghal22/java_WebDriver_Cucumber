@@ -37,7 +37,9 @@ public class SlavaRestWrapper {
                 .body(payload);
 
         HttpResponse<JsonNode> response = request.asJson();
+
         assertThat(response.getStatus()).isEqualTo(200);
+
         JSONObject body = response.getBody().getObject();
         loginToken = body.getString("token");
         System.out.println("Login successful! Token: " + loginToken);
@@ -59,6 +61,7 @@ public class SlavaRestWrapper {
 
         HttpResponse<JsonNode> response = request.asJson();
         assertThat(response.getStatus()).isEqualTo(201);
+
         JSONObject responsePositionJson = response.getBody().getObject();
         System.out.println("\n\nPosition created: " + responsePositionJson);
 

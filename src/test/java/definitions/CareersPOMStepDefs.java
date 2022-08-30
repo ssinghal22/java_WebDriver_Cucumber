@@ -47,7 +47,7 @@ public class CareersPOMStepDefs {
     public void iVerifyLogin(String role) throws Throwable {
         HashMap<String, String> user = getData(role);
         String actualName = new LandingPage().getNameOfLoggedUser();
-        assertThat(actualName).isEqualTo(user.get("firstName") + " " + user.get("lastName") );
+        assertThat(actualName).isEqualTo(user.get("firstName") + " " + user.get("lastName"));
     }
 
     @When("^I create new position$")
@@ -56,6 +56,7 @@ public class CareersPOMStepDefs {
 
         RecruitPage recruitPage = new RecruitPage();
         recruitPage.assertHeader();
+
         recruitPage.clickNewPosition();
 
         NewPositionPage newPositionPage = new NewPositionPage();

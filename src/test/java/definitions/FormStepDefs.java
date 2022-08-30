@@ -24,10 +24,6 @@ public class FormStepDefs {
         HashMap<String, String> sample = TestContext.getSample();
 
         SampleForm form = new SampleForm();
-//        form.fillUsername("SoniS");
-//        form.fillEmail("soni@mail.com");
-//        form.fillPassword("sonia");
-//        form.fillConfirmPassword("sonia");
 
         form.fillUsername(sample.get("username"));
         form.fillEmail(sample.get("email"));
@@ -36,25 +32,12 @@ public class FormStepDefs {
 
         form.fillName(sample.get("fname"), sample.get("mname"), sample.get("lname"));
 
-        //form.clickName();
-//        form.fillFirstName("Sonia");
-//        form.fillMiddleName("Krishy");
-//        form.fillLastName("Singhal");
-
-        //form.fillFirstName(sample.get("fname"));
-        //form.fillMiddleName(sample.get("mname"));
-        //form.fillLastName(sample.get("lname"));
-
-        //form.clickSave();
-
-       // form.fillPhone("1234567890");
         form.fillPhone(sample.get("phone"));
 
         form.selectDateOfBirth();
-        //form.selectMonth();
+
         form.selectMonth(sample.get("month"));
 
-       // form.selectYear();
         form.selectYear(sample.get("year"));
 
         form.selectDay();
@@ -63,7 +46,6 @@ public class FormStepDefs {
         form.selectGender();
         form.selectAllowedToContact();
 
-       // form.fillAddress("800 Willow St, San Jose CA 94000");
         form.fillAddress(sample.get("address"));
 
         form.selectCarMake(sample.get("car"));
@@ -85,26 +67,11 @@ public class FormStepDefs {
 
         String resultText = result.getResult();
 
-       /* HashMap<String, String> sampleData = new HashMap<>();
-        sampleData.put("username", "SoniS");
-        sampleData.put("email", "soni@mail.com");
-        sampleData.put("password", "sonia");
-        sampleData.put("confirmPassword", "sonia");
-        sampleData.put("address", "800 Willow St, San Jose CA 94000");
-        sampleData.put("fname", "Sonia");
-        sampleData.put("mname", "Krishy");
-        sampleData.put("lname", "Singhal");
-        sampleData.put("dob", "4/11/2000");
-        sampleData.put("origin", "India");
-        sampleData.put("gender", "female");
-        sampleData.put("phone", "1234567890");*/
-
         assertThat(resultText).containsIgnoringCase(data.get("username"));
         assertThat(resultText).containsIgnoringCase(data.get("email"));
         assertThat(resultText).containsIgnoringCase(data.get("fname"));
         assertThat(resultText).containsIgnoringCase(data.get("mname"));
         assertThat(resultText).containsIgnoringCase(data.get("lname"));
-        //assertThat(resultText).containsIgnoringCase(sampleData.get("dob"));
         assertThat(resultText).containsIgnoringCase("04");
         assertThat(resultText).containsIgnoringCase(data.get("year"));
 

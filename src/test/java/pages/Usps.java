@@ -23,9 +23,6 @@ public class Usps extends Page {
     private WebElement zipCodeAddress;
 
     public void lookUpZipByAddress() {
-       // mailShip.click();
-       // iconZip.click();
-        //zipCodeAddress.click();
         click(mailShip);
         click(iconZip);
         click(zipCodeAddress);
@@ -44,12 +41,9 @@ public class Usps extends Page {
     private WebElement zipByAddress;
 
     public void fillAddress(String aStreet, String aCity, String aState) {
-        //address.sendKeys(aStreet);
         sendKeys(address, aStreet);
-        //city.sendKeys(aCity);
         sendKeys(city, aCity);
         new Select(state).selectByValue(aState);
-        //zipByAddress.click();
         click(zipByAddress);
     }
 
